@@ -1,0 +1,17 @@
+---
+versioni: '3'
+services:
+  backend:
+    image: joeryan/cvmfs-backend:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/etc/cvmfs/keys:/etc/cvmfs/keys:ro"
+      - "/etc/cvmfs-monitor/backend-env:/root/cvmfs-monitor/backend/.env"
+  frontend:
+    image: joeryan/cvmfs-frontend:latest
+    ports:
+      - "8081:8081"
+    volumes:
+      - "/etc/cvmfs/keys:/etc/cvmfs/keys:ro"      
+      - "/etc/cvmfs-monitor/frontend-env:/root/cvmfs-monitor/frontend/.env"
