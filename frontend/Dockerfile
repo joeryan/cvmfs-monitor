@@ -1,6 +1,6 @@
 FROM centos:8
 
-EXPOSE 8080
+EXPOSE 8081
 
 USER root
 
