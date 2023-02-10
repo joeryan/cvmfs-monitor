@@ -31,7 +31,4 @@ RUN npm ci
 RUN npm run build
 RUN npm run build-addon
 
-RUN echo "PORT=8080" > .env
-RUN echo "API_PATH=/api/v0" >> .env
-
 CMD npm run start
