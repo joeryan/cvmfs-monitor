@@ -19,7 +19,7 @@ RUN yum install -y gcc-c++ python3 make git npm
 RUN npm install -g npm@9.4.2
 
 WORKDIR /root
-RUN git clone https://gitlab.cern.ch/cernvm/cvmfs-monitor.git
+RUN git clone https://github.com/joeryan/cvmfs-monitor.git
 
 RUN useradd cvmfs-monitor
 RUN chmod -R 777 /root
