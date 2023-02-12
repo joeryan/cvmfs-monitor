@@ -16,6 +16,7 @@ RUN chmod -R 777 /var/lib/cvmfs
 RUN yum install -y epel-release
 
 RUN yum install -y gcc-c++ python3 make git npm
+RUN npm install -g npm@9.4.2
 
 WORKDIR /root
 RUN git clone https://gitlab.cern.ch/cernvm/cvmfs-monitor.git
